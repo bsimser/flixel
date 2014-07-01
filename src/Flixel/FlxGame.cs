@@ -155,7 +155,7 @@ namespace org.flixel
             targetLeft = (GraphicsDevice.Viewport.Width - targetWidth) / 2;
 
             FlxG.LoadContent(GraphicsDevice);
-            _sndBeep = FlxG.Content.Load<SoundEffect>("Flixel/beep");
+            _sndBeep = FlxG.Content.Load<SoundEffect>("flixel/beep");
 
             initConsole();
 
