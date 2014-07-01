@@ -11,12 +11,12 @@ namespace org.flixel
         private int resX = 1280; //DO NOT CHANGE THESE VALUES!!
         private int resY = 720;  //your game should only be concerned with the
         //resolution parameters used when you call
-        //initGame() in your FlxGame class.
+        //super() in your Game class.
 #else
         private int resX = 480; //DO NOT CHANGE THESE VALUES!!
         private int resY = 800;  //your game should only be concerned with the
                                  //resolution parameters used when you call
-                                 //initGame() in your FlxGame class.
+                                 //super() in your FlxGame class.
 #endif
 
 #if XBOX360
@@ -82,5 +82,12 @@ namespace org.flixel
             base.Initialize();
         }
 
+        public void super(int GameSizeX, int GameSizeY,
+            FlxState InitialState, Color BGColor,
+            bool showFlixelLogo, Color logoColor)
+        {
+            _flixelgame = new FlxGame(this);
+            _flixelgame.initGame(GameSizeX, GameSizeY, InitialState, BGColor, showFlixelLogo, logoColor);
+        }
     }
 }
