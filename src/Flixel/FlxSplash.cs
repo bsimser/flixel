@@ -14,7 +14,7 @@ namespace org.flixel
 		private static Color _fc = Color.Gray;
 		private float _logoTimer = 0;
 		private Texture2D _poweredBy;
-		private SoundEffect _fSound;
+		//private SoundEffect _fSound;
         private static FlxState _nextScreen;
 
         public FlxSplash()
@@ -27,7 +27,7 @@ namespace org.flixel
             base.create();
             _f = null;
             _poweredBy = FlxG.Content.Load<Texture2D>("flixel/poweredby");
-            _fSound = FlxG.Content.Load<SoundEffect>("flixel/flixel");
+            //_fSound = FlxG.Content.Load<SoundEffect>("flixel/flixel");
 
             FlxG.flash.start(FlxG.backColor, 1f, null, false);
         }
@@ -66,7 +66,7 @@ namespace org.flixel
                 pwr.scale = pwrscale;
                 add(pwr);
 
-                _fSound.Play(FlxG.volume, 0f, 0f);
+                //_fSound.Play(FlxG.volume, 0f, 0f);
             }
 
             _logoTimer += FlxG.elapsed;

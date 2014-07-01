@@ -13,7 +13,7 @@ namespace org.flixel
     {
         private FlxState _firstScreen;
 
-        private SoundEffect _sndBeep;
+        //private SoundEffect _sndBeep;
 
         //basic display stuff
         internal FlxState _state;
@@ -155,7 +155,7 @@ namespace org.flixel
             targetLeft = (GraphicsDevice.Viewport.Width - targetWidth) / 2;
 
             FlxG.LoadContent(GraphicsDevice);
-            _sndBeep = FlxG.Content.Load<SoundEffect>("flixel/beep");
+            //_sndBeep = FlxG.Content.Load<SoundEffect>("flixel/beep");
 
             initConsole();
 
@@ -168,7 +168,7 @@ namespace org.flixel
 
         protected override void UnloadContent()
         {
-            _sndBeep.Dispose();
+            //_sndBeep.Dispose();
 
             if (FlxG.state != null)
             {
@@ -374,7 +374,7 @@ namespace org.flixel
 		{
             if (!FlxG.mute)
             {
-                _sndBeep.Play(FlxG.volume, 0f, 0f);
+                //_sndBeep.Play(FlxG.volume, 0f, 0f);
             }
 			_soundTrayTimer = 1;
 			_soundTrayRect.Y = 0;
